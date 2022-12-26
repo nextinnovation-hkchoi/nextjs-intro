@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Introduction
 
-## Getting Started
+* 프레임워크 : 나의 코드를 불러와서 모든 걸 동작하게 함. 따라서 특정한 규칙에 따라서 특정한 걸 해야 한다. 프레임워크는 추상화를 시켜서 깊은 곳에서 작동하는 코드에는 사용자가 접근할 수 없다. 내가 코드를 어떤 곳에 넣으면 framework가 그 코드를 호출하는 형태이다. 주체는 프레임워크이며, 나의 코드를 올바른 위치에 두면, 프레임워크가 코드를 불러서 사용해주는 것이다.
 
-First, run the development server:
+* 라이브러리 : 개발자로서 라이브러를 불러와서 내가 원하는대로 코드를 작성할 수 있고, 폴더명을 바꾸는 등의 자유도가 높다. 모든 게 나에게 달려있다. 따라서 React.js는 내가 원할 때 부르고 사용하는 라이브러리다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+* component를 export하고 있는 파일을 pages 폴더 안에 두면 된다. 그러면 next.js가 파일의 이름(컴포넌트명x)을 가져다가 url이름으로 알아서 사용해준다. 이로 인해 시간이 절약된다. 이때 반드시 export default를 해줘야 한다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* 앱의 홈은 index.js로 나온 것이다. 그리고 jsx를 쓸 때, useState나 useEffect 같은 react method를 사용할 때를 제외하고는 react를 import할 필요는 없다. 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* next.js는 앱에 있는 페이지들이 미리 렌더링된다. 이것들이 정적으로 생성된다. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* create react app은 client side render를 하는 앱을 만든다. 즉, '브라우저'가 사용자가 보는 UI를 만드는 모든 일을 처리한다. 사용자에게 보이는 모든 것은 react.js로 렌더링된 것이다. 이건 사용자가 보는 html 소스코드 안에는 들어있지 않다. 브라우저가 html을 가져올 때는 비어있는 div로 가져온다. 그 후, 브라우저가 모든 자바스크립트를 요청해서 브라우저가 자바스크립트와 react.js를 실행시키고, 그 후에서야 앱이 유저에게 보이게 되서 ui가 만들어지는 것이다. react.js 코드가 전달되기 전까지는 흰바탕 밖에 보이지가 않는다.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* next.js는 html 소스코드에 실제 div 코드를 가지고 있다. 
