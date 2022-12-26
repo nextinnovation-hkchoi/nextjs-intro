@@ -12,4 +12,18 @@
 
 * create react app은 client side render를 하는 앱을 만든다. 즉, '브라우저'가 사용자가 보는 UI를 만드는 모든 일을 처리한다. 사용자에게 보이는 모든 것은 react.js로 렌더링된 것이다. 이건 사용자가 보는 html 소스코드 안에는 들어있지 않다. 브라우저가 html을 가져올 때는 비어있는 div로 가져온다. 그 후, 브라우저가 모든 자바스크립트를 요청해서 브라우저가 자바스크립트와 react.js를 실행시키고, 그 후에서야 앱이 유저에게 보이게 되서 ui가 만들어지는 것이다. react.js 코드가 전달되기 전까지는 흰바탕 밖에 보이지가 않는다.
 
-* next.js는 html 소스코드에 실제 div 코드를 가지고 있다. 
+* next.js는 html 소스코드에 실제 div 코드를 가지고 있다. 따라서 유저가 매우 느린 연결을 하고 있거나, JS가 비활성화 되어 있어도 유저가 적어도 HTML을 볼 수 있다. 다만, api로부터 가져오는 데이터가 로딩되는데 오랜 시간이 걸릴 수 있다. 
+
+    * useState : 컴포넌트에서 보여줘야 하는 내용이 사용자 인터렉션에 따라 바뀌어야 할 때
+
+```
+
+```
+
+
+
+
+
+### 외부참조 링크
+* [노마드 코더 - Next.js](https://nomadcoders.co/nextjs-fundamentals/lectures/3439)
+* [useState 를 통해 컴포넌트에서 바뀌는 값 관리하기](https://react.vlpt.us/basic/07-useState.html?q=)
