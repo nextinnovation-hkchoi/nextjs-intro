@@ -6,7 +6,7 @@ export default function Home() {
       <NavBar />
       <h1>Hello!</h1>
       <a href="#">test</a>
-      <style jsx>{`
+      <style jsx global>{`
         a {
           color: brown;
         }
